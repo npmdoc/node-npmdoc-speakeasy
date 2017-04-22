@@ -1,0 +1,1053 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://github.com/speakeasyjs/speakeasy">speakeasy (v2.0.0)</a>
+</h1>
+<h4>Two-factor authentication for Node.js. One-time passcode generator (HOTP/TOTP) with support for Google Authenticator.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.speakeasy">module speakeasy</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.speakeasy._counter">
+            function <span class="apidocSignatureSpan">speakeasy.</span>_counter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.speakeasy.counter">
+            function <span class="apidocSignatureSpan">speakeasy.</span>counter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.speakeasy.digest">
+            function <span class="apidocSignatureSpan">speakeasy.</span>digest
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.speakeasy.generateSecret">
+            function <span class="apidocSignatureSpan">speakeasy.</span>generateSecret
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.speakeasy.generateSecretASCII">
+            function <span class="apidocSignatureSpan">speakeasy.</span>generateSecretASCII
+            <span class="apidocSignatureSpan">(length, symbols)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.speakeasy.generate_key">
+            function <span class="apidocSignatureSpan">speakeasy.</span>generate_key
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.speakeasy.generate_key_ascii">
+            function <span class="apidocSignatureSpan">speakeasy.</span>generate_key_ascii
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.speakeasy.hotp">
+            function <span class="apidocSignatureSpan">speakeasy.</span>hotp
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.speakeasy.otpauthURL">
+            function <span class="apidocSignatureSpan">speakeasy.</span>otpauthURL
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.speakeasy.time">
+            function <span class="apidocSignatureSpan">speakeasy.</span>time
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.speakeasy.totp">
+            function <span class="apidocSignatureSpan">speakeasy.</span>totp
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.speakeasy.hotp">module speakeasy.hotp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.speakeasy.hotp.hotp">
+            function <span class="apidocSignatureSpan">speakeasy.</span>hotp
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.speakeasy.hotp.verify">
+            function <span class="apidocSignatureSpan">speakeasy.hotp.</span>verify
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.speakeasy.hotp.verifyDelta">
+            function <span class="apidocSignatureSpan">speakeasy.hotp.</span>verifyDelta
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.speakeasy.totp">module speakeasy.totp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.speakeasy.totp.totp">
+            function <span class="apidocSignatureSpan">speakeasy.</span>totp
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.speakeasy.totp.verify">
+            function <span class="apidocSignatureSpan">speakeasy.totp.</span>verify
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.speakeasy.totp.verifyDelta">
+            function <span class="apidocSignatureSpan">speakeasy.totp.</span>verifyDelta
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.speakeasy" id="apidoc.module.speakeasy">module speakeasy</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.speakeasy._counter" id="apidoc.element.speakeasy._counter">
+        function <span class="apidocSignatureSpan">speakeasy.</span>_counter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _counter(options) {
+  var step = options.step || 30;
+  var time = options.time != null ? (options.time * 1000) : Date.now();
+
+  // also accepts 'initial_time', but deprecated
+  var epoch = (options.epoch != null ? (options.epoch * 1000) : (options.initial_time * 1000)) || 0;
+  if (options.initial_time != null) console.warn('Speakeasy - Deprecation Notice - Specifying the epoch using `initial_time` is
+no longer supported. Use `epoch` instead.');
+
+  return Math.floor((time - epoch) / step / 1000);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+
+exports.totp = function totpGenerate (options) {
+  // shadow options
+  options = Object.create(options);
+
+  // calculate default counter value
+  if (options.counter == null) options.counter = exports.<span class="apidocCodeKeywordSpan">_counter</span>(options);
+
+  // pass to hotp
+  return this.hotp(options);
+};
+
+// Alias time() for totp()
+exports.time = exports.totp;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.speakeasy.counter" id="apidoc.element.speakeasy.counter">
+        function <span class="apidocSignatureSpan">speakeasy.</span>counter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hotpGenerate(options) {
+  // unpack digits
+  // backward compatibility: `length` is also accepted here, but deprecated
+  var digits = (options.digits != null ? options.digits : options.length) || 6;
+  if (options.length != null) console.warn('Speakeasy - Deprecation Notice - Specifying token digits using `length` is no longer
+ supported. Use `digits` instead.');
+
+  // digest the options
+  var digest = options.digest || exports.digest(options);
+
+  // compute HOTP offset
+  var offset = digest[digest.length - 1] &amp; 0xf;
+
+  // calculate binary code (RFC4226 5.4)
+  var code = (digest[offset] &amp; 0x7f) &lt;&lt; 24 |
+    (digest[offset + 1] &amp; 0xff) &lt;&lt; 16 |
+    (digest[offset + 2] &amp; 0xff) &lt;&lt; 8 |
+    (digest[offset + 3] &amp; 0xff);
+
+  // left-pad code
+  code = new Array(digits + 1).join('0') + code.toString(10);
+
+  // return length number off digits
+  return code.substr(-digits);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.speakeasy.digest" id="apidoc.element.speakeasy.digest">
+        function <span class="apidocSignatureSpan">speakeasy.</span>digest
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function digest(options) {
+  var i;
+
+  // unpack options
+  var secret = options.secret;
+  var counter = options.counter;
+  var encoding = options.encoding || 'ascii';
+  var algorithm = (options.algorithm || 'sha1').toLowerCase();
+
+  // Backwards compatibility - deprecated
+  if (options.key != null) {
+    console.warn('Speakeasy - Deprecation Notice - Specifying the secret using `key` is no longer supported. Use `secret` instead
+.');
+    secret = options.key;
+  }
+
+  // convert secret to buffer
+  if (!Buffer.isBuffer(secret)) {
+    secret = encoding === 'base32' ? base32.decode(secret)
+      : new Buffer(secret, encoding);
+  }
+
+  // create an buffer from the counter
+  var buf = new Buffer(8);
+  var tmp = counter;
+  for (i = 0; i &lt; 8; i++) {
+    // mask 0xff over number to get last 8
+    buf[7 - i] = tmp &amp; 0xff;
+
+    // shift 8 and get ready to loop over the next batch of 8
+    tmp = tmp &gt;&gt; 8;
+  }
+
+  // init hmac with the key
+  var hmac = crypto.createHmac(algorithm, secret);
+
+  // update hmac with the counter
+  hmac.update(buf);
+
+  // return the digest
+  return hmac.digest();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ // init hmac with the key
+ var hmac = crypto.createHmac(algorithm, secret);
+
+ // update hmac with the counter
+ hmac.update(buf);
+
+ // return the digest
+ return hmac.<span class="apidocCodeKeywordSpan">digest</span>();
+};
+
+/**
+* Generate a counter-based one-time token. Specify the key and counter, and
+* receive the one-time password for that counter position as a string. You can
+* also specify a token length, as well as the encoding (ASCII, hexadecimal, or
+* base32) and the hashing algorithm to use (SHA1, SHA256, SHA512).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.speakeasy.generateSecret" id="apidoc.element.speakeasy.generateSecret">
+        function <span class="apidocSignatureSpan">speakeasy.</span>generateSecret
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function generateSecret(options) {
+  // options
+  if (!options) options = {};
+  var length = options.length || 32;
+  var name = encodeURIComponent(options.name || 'SecretKey');
+  var qr_codes = options.qr_codes || false;
+  var google_auth_qr = options.google_auth_qr || false;
+  var otpauth_url = options.otpauth_url != null ? options.otpauth_url : true;
+  var symbols = true;
+
+  // turn off symbols only when explicity told to
+  if (options.symbols !== undefined &amp;&amp; options.symbols === false) {
+    symbols = false;
+  }
+
+  // generate an ascii key
+  var key = this.generateSecretASCII(length, symbols);
+
+  // return a SecretKey with ascii, hex, and base32
+  var SecretKey = {};
+  SecretKey.ascii = key;
+  SecretKey.hex = Buffer(key, 'ascii').toString('hex');
+  SecretKey.base32 = base32.encode(Buffer(key)).toString().replace(/=/g, '');
+
+  // generate some qr codes if requested
+  if (qr_codes) {
+    console.warn('Speakeasy - Deprecation Notice - generateSecret() QR codes are deprecated and no longer supported. Please use
+your own QR code implementation.');
+    SecretKey.qr_code_ascii = 'https://chart.googleapis.com/chart?chs=166x166&amp;chld=L|0&amp;cht=qr&amp;chl=' + encodeURIComponent(SecretKey
+.ascii);
+    SecretKey.qr_code_hex = 'https://chart.googleapis.com/chart?chs=166x166&amp;chld=L|0&amp;cht=qr&amp;chl=' + encodeURIComponent(SecretKey
+.hex);
+    SecretKey.qr_code_base32 = 'https://chart.googleapis.com/chart?chs=166x166&amp;chld=L|0&amp;cht=qr&amp;chl=' + encodeURIComponent(SecretKey
+.base32);
+  }
+
+  // add in the Google Authenticator-compatible otpauth URL
+  if (otpauth_url) {
+    SecretKey.otpauth_url = exports.otpauthURL({
+      secret: SecretKey.ascii,
+      label: name
+    });
+  }
+
+  // generate a QR code for use in Google Authenticator if requested
+  if (google_auth_qr) {
+    console.warn('Speakeasy - Deprecation Notice - generateSecret() Google Auth QR code is deprecated and no longer supported. Please
+ use your own QR code implementation.');
+    SecretKey.google_auth_qr = 'https://chart.googleapis.com/chart?chs=166x166&amp;chld=L|0&amp;cht=qr&amp;chl=' + encodeURIComponent(exports
+.otpauthURL({ secret: SecretKey.base32, label: name }));
+  }
+
+  return SecretKey;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+3. Authenticate the token for the first time
+
+### Generating a key
+
+Use Speakeasy's key generator to get a key.
+
+```js
+var secret = speakeasy.<span class="apidocCodeKeywordSpan">generateSecret</span>();
+// Returns an object with secret.ascii, secret.hex, and secret.base32.
+// Also returns secret.otpauth_url, which we'll use later.
+```
+
+This will generate a secret key of length 32, which will be the secret key for the user.
+
+Now, we want to make sure that this secret works by validating the token that the user gets from it for the first time. In other
+ words, we don't want to set this as the user's secret key just yet â€“ we first want to verify their token for the first
+ time. We need to persist the secret so that we can use it for token validation later.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.speakeasy.generateSecretASCII" id="apidoc.element.speakeasy.generateSecretASCII">
+        function <span class="apidocSignatureSpan">speakeasy.</span>generateSecretASCII
+        <span class="apidocSignatureSpan">(length, symbols)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function generateSecretASCII(length, symbols) {
+  var bytes = crypto.randomBytes(length || 32);
+  var set = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz';
+  if (symbols) {
+    set += '!@#$%^&amp;*()&lt;&gt;?/[]{},.:;';
+  }
+
+  var output = '';
+  for (var i = 0, l = bytes.length; i &lt; l; i++) {
+    output += set[Math.floor(bytes[i] / 255.0 * (set.length - 1))];
+  }
+  return output;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// turn off symbols only when explicity told to
+if (options.symbols !== undefined &amp;&amp; options.symbols === false) {
+  symbols = false;
+}
+
+// generate an ascii key
+var key = this.<span class="apidocCodeKeywordSpan">generateSecretASCII</span>(length, symbols);
+
+// return a SecretKey with ascii, hex, and base32
+var SecretKey = {};
+SecretKey.ascii = key;
+SecretKey.hex = Buffer(key, 'ascii').toString('hex');
+SecretKey.base32 = base32.encode(Buffer(key)).toString().replace(/=/g, '');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.speakeasy.generate_key" id="apidoc.element.speakeasy.generate_key">
+        function <span class="apidocSignatureSpan">speakeasy.</span>generate_key
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.speakeasy.generate_key_ascii" id="apidoc.element.speakeasy.generate_key_ascii">
+        function <span class="apidocSignatureSpan">speakeasy.</span>generate_key_ascii
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.speakeasy.hotp" id="apidoc.element.speakeasy.hotp">
+        function <span class="apidocSignatureSpan">speakeasy.</span>hotp
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hotpGenerate(options) {
+  // unpack digits
+  // backward compatibility: `length` is also accepted here, but deprecated
+  var digits = (options.digits != null ? options.digits : options.length) || 6;
+  if (options.length != null) console.warn('Speakeasy - Deprecation Notice - Specifying token digits using `length` is no longer
+ supported. Use `digits` instead.');
+
+  // digest the options
+  var digest = options.digest || exports.digest(options);
+
+  // compute HOTP offset
+  var offset = digest[digest.length - 1] &amp; 0xf;
+
+  // calculate binary code (RFC4226 5.4)
+  var code = (digest[offset] &amp; 0x7f) &lt;&lt; 24 |
+    (digest[offset + 1] &amp; 0xff) &lt;&lt; 16 |
+    (digest[offset + 2] &amp; 0xff) &lt;&lt; 8 |
+    (digest[offset + 3] &amp; 0xff);
+
+  // left-pad code
+  code = new Array(digits + 1).join('0') + code.toString(10);
+
+  // return length number off digits
+  return code.substr(-digits);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+#### Getting a time-based token for the current time
+
+```js
+// Generate a time-based token based on the base-32 key.
+// HOTP (counter-based tokens) can also be used if `totp` is replaced by
+// `hotp` (i.e. speakeasy.<span class="apidocCodeKeywordSpan">hotp</span>()) and a `counter` is given in the options.
+var token = speakeasy.totp({
+  secret: secret.base32,
+  encoding: 'base32'
+});
+
+// Returns token for the secret at the current time
+// Compare this to user input
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.speakeasy.otpauthURL" id="apidoc.element.speakeasy.otpauthURL">
+        function <span class="apidocSignatureSpan">speakeasy.</span>otpauthURL
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function otpauthURL(options) {
+  // unpack options
+  var secret = options.secret;
+  var label = options.label;
+  var issuer = options.issuer;
+  var type = (options.type || 'totp').toLowerCase();
+  var counter = options.counter;
+  var algorithm = options.algorithm;
+  var digits = options.digits;
+  var period = options.period;
+  var encoding = options.encoding || 'ascii';
+
+  // validate type
+  switch (type) {
+    case 'totp':
+    case 'hotp':
+      break;
+    default:
+      throw new Error('Speakeasy - otpauthURL - Invalid type `' + type + '`; must be `hotp` or `totp`');
+  }
+
+  // validate required options
+  if (!secret) throw new Error('Speakeasy - otpauthURL - Missing secret');
+  if (!label) throw new Error('Speakeasy - otpauthURL - Missing label');
+
+  // require counter for HOTP
+  if (type === 'hotp' &amp;&amp; (counter === null || typeof counter === 'undefined')) {
+    throw new Error('Speakeasy - otpauthURL - Missing counter value for HOTP');
+  }
+
+  // convert secret to base32
+  if (encoding !== 'base32') secret = new Buffer(secret, encoding);
+  if (Buffer.isBuffer(secret)) secret = base32.encode(secret);
+
+  // build query while validating
+  var query = {secret: secret};
+  if (issuer) query.issuer = issuer;
+
+  // validate algorithm
+  if (algorithm != null) {
+    switch (algorithm.toUpperCase()) {
+      case 'SHA1':
+      case 'SHA256':
+      case 'SHA512':
+        break;
+      default:
+        console.warn('Speakeasy - otpauthURL - Warning - Algorithm generally should be SHA1, SHA256, or SHA512');
+    }
+    query.algorithm = algorithm.toUpperCase();
+  }
+
+  // validate digits
+  if (digits != null) {
+    if (isNaN(digits)) {
+      throw new Error('Speakeasy - otpauthURL - Invalid digits `' + digits + '`');
+    } else {
+      switch (parseInt(digits, 10)) {
+        case 6:
+        case 8:
+          break;
+        default:
+          console.warn('Speakeasy - otpauthURL - Warning - Digits generally should be either 6 or 8');
+      }
+    }
+    query.digits = digits;
+  }
+
+  // validate period
+  if (period != null) {
+    period = parseInt(period, 10);
+    if (~~period !== period) {
+      throw new Error('Speakeasy - otpauthURL - Invalid period `' + period + '`');
+    }
+    query.period = period;
+  }
+
+  // return url
+  return url.format({
+    protocol: 'otpauth',
+    slashes: true,
+    hostname: type,
+    pathname: label,
+    query: query
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+// Generate a secret, if needed
+var secret = speakeasy.generateSecret();
+// By default, generateSecret() returns an otpauth_url for SHA1
+
+// Use otpauthURL() to get a custom authentication URL for SHA512
+var url = speakeasy.<span class="apidocCodeKeywordSpan">otpauthURL</span>({ secret: secret.ascii, label: 'Name of Secret'
+;, algorithm: 'sha512' });
+
+// Pass URL into a QR code generator
+```
+
+#### Specifying a window for verifying HOTP and TOTP
+
+Verify a HOTP token with counter value 42 and a window of 10. HOTP has a one-sided window, so this will check counter values from
+ 42 to 52, inclusive, and return a `{ delta: n }` where `n` is the difference between the given counter value and the counter position
+ at which the token was found, or `undefined` if it was not found within the window. See the &lt;a href="#totpâ€¤verifyDelta
+"&gt;`hotpâ€¤verifyDelta(options)`&lt;/a&gt; documentation for more info.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.speakeasy.time" id="apidoc.element.speakeasy.time">
+        function <span class="apidocSignatureSpan">speakeasy.</span>time
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function totpGenerate(options) {
+  // shadow options
+  options = Object.create(options);
+
+  // calculate default counter value
+  if (options.counter == null) options.counter = exports._counter(options);
+
+  // pass to hotp
+  return this.hotp(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.speakeasy.totp" id="apidoc.element.speakeasy.totp">
+        function <span class="apidocSignatureSpan">speakeasy.</span>totp
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function totpGenerate(options) {
+  // shadow options
+  options = Object.create(options);
+
+  // calculate default counter value
+  if (options.counter == null) options.counter = exports._counter(options);
+
+  // pass to hotp
+  return this.hotp(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+#### Getting a time-based token for the current time
+
+```js
+// Generate a time-based token based on the base-32 key.
+// HOTP (counter-based tokens) can also be used if `totp` is replaced by
+// `hotp` (i.e. speakeasy.hotp()) and a `counter` is given in the options.
+var token = speakeasy.<span class="apidocCodeKeywordSpan">totp</span>({
+  secret: secret.base32,
+  encoding: 'base32'
+});
+
+// Returns token for the secret at the current time
+// Compare this to user input
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.speakeasy.hotp" id="apidoc.module.speakeasy.hotp">module speakeasy.hotp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.speakeasy.hotp.hotp" id="apidoc.element.speakeasy.hotp.hotp">
+        function <span class="apidocSignatureSpan">speakeasy.</span>hotp
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hotpGenerate(options) {
+  // unpack digits
+  // backward compatibility: `length` is also accepted here, but deprecated
+  var digits = (options.digits != null ? options.digits : options.length) || 6;
+  if (options.length != null) console.warn('Speakeasy - Deprecation Notice - Specifying token digits using `length` is no longer
+ supported. Use `digits` instead.');
+
+  // digest the options
+  var digest = options.digest || exports.digest(options);
+
+  // compute HOTP offset
+  var offset = digest[digest.length - 1] &amp; 0xf;
+
+  // calculate binary code (RFC4226 5.4)
+  var code = (digest[offset] &amp; 0x7f) &lt;&lt; 24 |
+    (digest[offset + 1] &amp; 0xff) &lt;&lt; 16 |
+    (digest[offset + 2] &amp; 0xff) &lt;&lt; 8 |
+    (digest[offset + 3] &amp; 0xff);
+
+  // left-pad code
+  code = new Array(digits + 1).join('0') + code.toString(10);
+
+  // return length number off digits
+  return code.substr(-digits);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+#### Getting a time-based token for the current time
+
+```js
+// Generate a time-based token based on the base-32 key.
+// HOTP (counter-based tokens) can also be used if `totp` is replaced by
+// `hotp` (i.e. speakeasy.<span class="apidocCodeKeywordSpan">hotp</span>()) and a `counter` is given in the options.
+var token = speakeasy.totp({
+  secret: secret.base32,
+  encoding: 'base32'
+});
+
+// Returns token for the secret at the current time
+// Compare this to user input
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.speakeasy.hotp.verify" id="apidoc.element.speakeasy.hotp.verify">
+        function <span class="apidocSignatureSpan">speakeasy.hotp.</span>verify
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hotpVerify(options) {
+  return exports.hotp.verifyDelta(options) != null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// Let's say we stored the user's temporary secret in a user object like above:
+// (This is specific to your implementation)
+var base32secret = user.two_factor_temp_secret;
+```
+```js
+// Use verify() to check the token against the secret
+var verified = speakeasy.totp.<span class="apidocCodeKeywordSpan">verify</span>({ secret: base32secret,
+                                       encoding: 'base32',
+                                       token: userToken });
+```
+
+`verified` will be true if the token is successfully verified, false if not.
+
+If successfully verified, you can now save the secret to the user's account and use the same process above whenever you need
+ to use two-factor to authenticate the user, like during login.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.speakeasy.hotp.verifyDelta" id="apidoc.element.speakeasy.hotp.verifyDelta">
+        function <span class="apidocSignatureSpan">speakeasy.hotp.</span>verifyDelta
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hotpVerifyDelta(options) {
+  var i;
+
+  // shadow options
+  options = Object.create(options);
+
+  // unpack options
+  var token = String(options.token);
+  var digits = parseInt(options.digits, 10) || 6;
+  var window = parseInt(options.window, 10) || 0;
+  var counter = parseInt(options.counter, 10) || 0;
+
+  // fail if token is not of correct length
+  if (token.length !== digits) {
+    return;
+  }
+
+  // parse token to integer
+  token = parseInt(token, 10);
+
+  // fail if token is NA
+  if (isNaN(token)) {
+    return;
+  }
+
+  // loop from C to C + W inclusive
+  for (i = counter; i &lt;= counter + window; ++i) {
+    options.counter = i;
+    // domain-specific constant-time comparison for integer codes
+    if (parseInt(exports.hotp(options), 10) === token) {
+      // found a matching code, return delta
+      return {delta: i - counter};
+    }
+  }
+
+  // no codes have matched
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+A TOTP is incremented every `step` time-step seconds. By default, the time-step
+is 30 seconds. You may change the time-step using the `step` option, with units
+in seconds.
+
+```js
+// Verify a given token is within 3 time-steps (+/- 2 minutes) from the server
+// time-step.
+var tokenDelta = speakeasy.totp.<span class="apidocCodeKeywordSpan">verifyDelta</span>({
+  secret: secret.base32,
+  encoding: 'base32',
+  token: '123456',
+  window: 2,
+  step: 60
+});
+// Returns {delta: 0} where the delta is the time step difference
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.speakeasy.totp" id="apidoc.module.speakeasy.totp">module speakeasy.totp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.speakeasy.totp.totp" id="apidoc.element.speakeasy.totp.totp">
+        function <span class="apidocSignatureSpan">speakeasy.</span>totp
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function totpGenerate(options) {
+  // shadow options
+  options = Object.create(options);
+
+  // calculate default counter value
+  if (options.counter == null) options.counter = exports._counter(options);
+
+  // pass to hotp
+  return this.hotp(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+#### Getting a time-based token for the current time
+
+```js
+// Generate a time-based token based on the base-32 key.
+// HOTP (counter-based tokens) can also be used if `totp` is replaced by
+// `hotp` (i.e. speakeasy.hotp()) and a `counter` is given in the options.
+var token = speakeasy.<span class="apidocCodeKeywordSpan">totp</span>({
+  secret: secret.base32,
+  encoding: 'base32'
+});
+
+// Returns token for the secret at the current time
+// Compare this to user input
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.speakeasy.totp.verify" id="apidoc.element.speakeasy.totp.verify">
+        function <span class="apidocSignatureSpan">speakeasy.totp.</span>verify
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function totpVerify(options) {
+  return exports.totp.verifyDelta(options) != null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// Let's say we stored the user's temporary secret in a user object like above:
+// (This is specific to your implementation)
+var base32secret = user.two_factor_temp_secret;
+```
+```js
+// Use verify() to check the token against the secret
+var verified = speakeasy.totp.<span class="apidocCodeKeywordSpan">verify</span>({ secret: base32secret,
+                                       encoding: 'base32',
+                                       token: userToken });
+```
+
+`verified` will be true if the token is successfully verified, false if not.
+
+If successfully verified, you can now save the secret to the user's account and use the same process above whenever you need
+ to use two-factor to authenticate the user, like during login.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.speakeasy.totp.verifyDelta" id="apidoc.element.speakeasy.totp.verifyDelta">
+        function <span class="apidocSignatureSpan">speakeasy.totp.</span>verifyDelta
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function totpVerifyDelta(options) {
+  // shadow options
+  options = Object.create(options);
+
+  // unpack options
+  var window = parseInt(options.window, 10) || 0;
+
+  // calculate default counter value
+  if (options.counter == null) options.counter = exports._counter(options);
+
+  // adjust for two-sided window
+  options.counter -= window;
+  options.window += window;
+
+  // pass to hotp.verifyDelta
+  var delta = exports.hotp.verifyDelta(options);
+
+  // adjust for two-sided window
+  if (delta) {
+    delta.delta -= window;
+  }
+
+  return delta;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+A TOTP is incremented every `step` time-step seconds. By default, the time-step
+is 30 seconds. You may change the time-step using the `step` option, with units
+in seconds.
+
+```js
+// Verify a given token is within 3 time-steps (+/- 2 minutes) from the server
+// time-step.
+var tokenDelta = speakeasy.totp.<span class="apidocCodeKeywordSpan">verifyDelta</span>({
+  secret: secret.base32,
+  encoding: 'base32',
+  token: '123456',
+  window: 2,
+  step: 60
+});
+// Returns {delta: 0} where the delta is the time step difference
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
